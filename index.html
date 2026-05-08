@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<!-- SEO -->
+<meta name="description" content="Aqua Star — Mangalore's premier pet store. Buy fish, birds, cats, aquariums, pet food and accessories at Shop #G38, Smart City, Thokkottu, Mangaluru."/>
+<meta name="keywords" content="pet store mangalore, aquarium fish mangalore, birds for sale mangalore, pet shop thokkottu, aqua star mangalore, pet food mangalore, cat shop mangalore"/>
+<meta name="author" content="Aqua Star Pet Store"/>
+<meta name="robots" content="index, follow"/>
+<meta name="theme-color" content="#020b18"/>
+<!-- Open Graph (WhatsApp / Facebook preview) -->
+<meta property="og:title" content="Aqua Star | Premium Pet Store — Mangalore"/>
+<meta property="og:description" content="Exotic fish, birds, cats, aquariums, pet food and accessories. Visit us at Smart City, Thokkottu, Mangaluru."/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="en_IN"/>
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Aqua Star | Pet Store Mangalore"/>
+<meta name="twitter:description" content="Premium pets and supplies in Mangaluru, Karnataka."/>
+<!-- Canonical -->
+<link rel="canonical" href="https://aquastar.vercel.app/"/>
+<title>Aqua Star | Pets &amp; Supplies — Mangalore</title>
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<!-- Structured Data (Google rich results) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "PetStore",
+  "name": "Aqua Star",
+  "description": "Premium pet store in Mangalore selling fish, birds, cats, aquariums and accessories.",
+  "url": "https://aquastar.vercel.app",
+  "telephone": "+919876543210",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Shop #G38, Ground Floor, Smart City, Thokkottu",
+    "addressLocality": "Mangaluru",
+    "addressRegion": "Karnataka",
+    "postalCode": "575006",
+    "addressCountry": "IN"
+  },
+  "openingHours": ["Mo-Sa 09:00-20:00", "Su 10:00-18:00"],
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 12.9215,
+    "longitude": 74.8895
+  }
+}
+</script>
+<style>
+:root{--aqua:#00d4ff;--aqua2:#0090ff;--ink:#020b18;--deep:#051428;--ocean:#0a2040;--mist:#9ecfe8;--silver:#cce4f5;--green:#00e676;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{font-family:'DM Sans',sans-serif;background:var(--ink);color:#d0eeff;overflow-x:hidden;-webkit-font-smoothing:antialiased;text-rendering:optimizeSpeed;}
+#aqua-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;display:block;will-change:transform;}
+img{max-width:100%;height:auto;display:block;}
+a{-webkit-tap-highlight-color:transparent;}
+.navbar,section,.section,footer,#lightbox,#admin-panel,.toast{position:relative;z-index:10;}
+/* NAVBAR */
+.navbar{position:fixed;top:0;left:0;width:100%;z-index:200;padding:0 5%;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);background:rgba(5,15,30,.95);border-bottom:1px solid rgba(0,212,255,.08);display:flex;align-items:center;justify-content:space-between;height:62px;}
+.logo{display:flex;flex-direction:column;line-height:1;}
+.logo-name{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:#e8f8ff;letter-spacing:.04em;}
+.logo-name span{color:var(--aqua);}
+.logo-sub{font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(158,207,232,.4);margin-top:1px;}
+.nav-links{display:flex;gap:0;align-items:center;}
+.nav-links a{color:rgba(158,207,232,.55);text-decoration:none;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;transition:color .2s;padding:0 18px;height:62px;display:flex;align-items:center;border-bottom:2px solid transparent;}
+.nav-links a:hover{color:#e8f8ff;}
+.nav-links a.active{color:var(--aqua);border-bottom-color:var(--aqua);}
+.nav-actions{display:flex;align-items:center;gap:8px;}
+.nav-btn{display:inline-flex;align-items:center;gap:7px;padding:8px 16px;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;text-decoration:none;transition:.2s;white-space:nowrap;border:1px solid rgba(158,207,232,.2);background:transparent;color:rgba(158,207,232,.7);}
+.nav-btn:hover{border-color:rgba(158,207,232,.45);color:#e8f8ff;background:rgba(255,255,255,.04);}
+.nav-btn-wa{background:linear-gradient(135deg,#25D366,#128C7E);border-color:transparent;color:#fff;}
+.nav-btn-wa:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(37,211,102,.3);color:#fff;}
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:140px 24px 100px;background:transparent;position:relative;overflow:hidden;}
+.hero-content{max-width:860px;position:relative;z-index:2;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 20px;border:1px solid rgba(0,212,255,.3);border-radius:999px;color:var(--aqua);font-size:.75rem;letter-spacing:.18em;margin-bottom:28px;background:rgba(2,11,24,.5);backdrop-filter:blur(8px);}
+.hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--aqua);animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.3;}}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3.5rem,9vw,7rem);font-weight:300;line-height:.95;margin-bottom:24px;background:linear-gradient(135deg,#fff 0%,#cce4f5 40%,#00d4ff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hero p{font-size:1.05rem;line-height:1.85;color:#c8e8ff;margin-bottom:40px;max-width:580px;margin-left:auto;margin-right:auto;}
+.btn-group{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;}
+.scroll-ind{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:5px;z-index:3;}
+.scroll-chev{width:18px;height:18px;border-right:2px solid rgba(0,212,255,.7);border-bottom:2px solid rgba(0,212,255,.7);transform:rotate(45deg);animation:chev 1.8s ease-in-out infinite;}
+.scroll-chev:nth-child(2){animation-delay:.22s;opacity:.6;}
+.scroll-chev:nth-child(3){animation-delay:.44s;opacity:.3;}
+@keyframes chev{0%,100%{opacity:.9;transform:rotate(45deg) translateY(0);}50%{opacity:.2;transform:rotate(45deg) translateY(6px);}}
+/* BUTTONS */
+.btn{padding:14px 32px;border-radius:10px;text-decoration:none;font-size:.8rem;letter-spacing:.13em;text-transform:uppercase;transition:.3s ease;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;display:inline-flex;align-items:center;gap:8px;}
+.btn-primary{background:linear-gradient(135deg,var(--aqua2),var(--aqua));color:#fff;}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(0,144,255,.3);}
+.btn-outline{border:1px solid rgba(0,212,255,.35);color:#a0d8f0;background:transparent;}
+.btn-outline:hover{background:rgba(0,212,255,.1);transform:translateY(-3px);}
+.btn-green{background:linear-gradient(135deg,#00c853,#00e676);color:#fff;}
+.btn-green:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(0,200,83,.25);}
+/* SECTIONS */
+.section{padding:100px 7%;background:rgba(2,11,24,.55);}
+.section-header{text-align:center;margin-bottom:60px;}
+.section-tag{display:inline-block;color:var(--aqua);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:12px;}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,4vw,3.2rem);font-weight:300;color:#e8f8ff;}
+.sdiv{height:1px;background:linear-gradient(to right,transparent,#00d4ff,transparent);border:none;margin:0;}
+/* PET CARDS */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:22px;}
+.card{background:rgba(5,20,40,.72);border-radius:16px;overflow:hidden;border:1px solid rgba(0,212,255,.18);backdrop-filter:blur(10px);transition:.25s ease;cursor:pointer;}
+.card:hover{transform:translateY(-6px);border-color:rgba(0,212,255,.5);box-shadow:inset 0 0 20px rgba(0,212,255,.06);}
+.card img{width:100%;height:220px;object-fit:cover;display:block;}
+.card-content{padding:20px;}
+.card h3{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;margin-bottom:8px;color:#e8f8ff;}
+.card p{line-height:1.7;color:#b8dff5;font-size:.93rem;margin-bottom:12px;}
+.pet-explore-btn{display:inline-flex;align-items:center;gap:5px;padding:5px 14px;border-radius:99px;font-size:12px;background:rgba(0,212,255,.12);border:1px solid rgba(0,212,255,.3);color:#a0d8f0;pointer-events:none;font-family:'DM Sans',sans-serif;transition:.2s;}
+.card:hover .pet-explore-btn{border-color:#00d4ff;color:#fff;background:rgba(0,212,255,.2);}
+/* PRODUCT CARDS */
+.product-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px;}
+.product-card{background:rgba(5,20,40,.72);border-radius:16px;overflow:hidden;border:1px solid rgba(0,212,255,.18);backdrop-filter:blur(10px);transition:.25s ease;display:flex;flex-direction:column;}
+.product-card:hover{transform:translateY(-4px);border-color:rgba(0,212,255,.5);box-shadow:inset 0 0 20px rgba(0,212,255,.06);}
+.product-img-wrap{position:relative;overflow:hidden;height:220px;cursor:pointer;}
+.product-img-wrap img{width:100%;height:100%;object-fit:cover;transition:.4s;}
+.product-card:hover .product-img-wrap img{transform:scale(1.06);}
+.product-badge-wrap{position:absolute;top:12px;left:12px;display:flex;flex-wrap:wrap;gap:5px;}
+.badge-tag{padding:4px 10px;border-radius:99px;font-size:.72rem;letter-spacing:.05em;font-weight:500;backdrop-filter:blur(8px);}
+.badge-custom{background:rgba(0,212,255,.2);border:1px solid rgba(0,212,255,.35);color:var(--aqua);}
+.badge-stock-in{background:rgba(0,200,83,.18);border:1px solid rgba(0,200,83,.35);color:#00e676;}
+.badge-stock-out{background:rgba(255,64,96,.18);border:1px solid rgba(255,64,96,.35);color:#ff8080;}
+.badge-cat{background:rgba(255,170,0,.15);border:1px solid rgba(255,170,0,.3);color:#ffcc44;}
+.product-info{padding:18px 20px;flex:1;display:flex;flex-direction:column;gap:8px;}
+.product-name{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:400;color:#e8f8ff;}
+.product-desc{color:#b8dff5;font-size:.88rem;line-height:1.6;flex:1;}
+.product-price{font-size:1.2rem;font-weight:500;color:var(--aqua);font-family:'Cormorant Garamond',serif;}
+.product-price span{font-size:.8rem;color:rgba(204,228,245,.5);font-family:'DM Sans',sans-serif;font-weight:300;}
+.product-actions{padding:14px 20px;border-top:1px solid rgba(0,212,255,.08);display:flex;gap:10px;}
+.wa-btn{flex:1;padding:10px;border-radius:8px;border:none;cursor:pointer;background:linear-gradient(135deg,#25D366,#128C7E);color:#fff;font-family:'DM Sans',sans-serif;font-size:.78rem;letter-spacing:.07em;text-transform:uppercase;transition:.2s;display:flex;align-items:center;justify-content:center;gap:6px;text-decoration:none;}
+.wa-btn:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(37,211,102,.25);}
+.view-btn{padding:10px 14px;border-radius:8px;border:1px solid rgba(0,212,255,.2);background:transparent;color:#a0d8f0;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.8rem;transition:.2s;}
+.view-btn:hover{background:rgba(0,212,255,.08);}
+.gallery-empty{grid-column:1/-1;text-align:center;padding:70px 20px;border:2px dashed rgba(0,212,255,.12);border-radius:16px;color:#80c0e0;}
+.filter-bar{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:36px;}
+.filter-btn{padding:8px 20px!important;font-size:.75rem!important;border-radius:99px!important;}
+/* CONTACT */
+.contact-box{max-width:720px;margin:auto;background:rgba(5,20,40,.72);padding:48px;border-radius:16px;border:1px solid rgba(0,212,255,.18);backdrop-filter:blur(10px);}
+.contact-row{display:flex;gap:20px;align-items:flex-start;padding:20px 0;border-bottom:1px solid rgba(0,212,255,.07);}
+.contact-row:last-child{border-bottom:none;}
+.contact-icon{width:42px;height:42px;border-radius:10px;background:rgba(0,212,255,.08);border:1px solid rgba(0,212,255,.15);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;}
+.contact-label{color:var(--aqua);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:5px;}
+.contact-value{color:#c8e8ff;line-height:1.8;}
+footer{text-align:center;padding:32px;border-top:1px solid rgba(0,212,255,.08);color:#80c0e0;font-size:.88rem;background:rgba(2,11,24,.7);backdrop-filter:blur(8px);}
+/* PRODUCT LIGHTBOX */
+#lightbox{position:fixed;inset:0;z-index:500;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;padding:20px;}
+#lightbox.active{display:flex;}
+#lightbox img{max-width:90vw;max-height:85vh;object-fit:contain;border-radius:12px;}
+#lightbox-close{position:absolute;top:20px;right:24px;background:rgba(255,255,255,.1);border:none;color:#fff;width:44px;height:44px;border-radius:50%;font-size:1.3rem;cursor:pointer;}
+/* SECTION GALLERY MODAL */
+#sec-modal{position:fixed;inset:0;z-index:600;background:rgba(0,0,0,.75);display:none;align-items:flex-start;justify-content:center;padding:20px;overflow-y:auto;}
+#sec-modal.open{display:flex;}
+.sec-modal-inner{background:rgba(2,11,24,.96);backdrop-filter:blur(18px);border:1px solid rgba(0,212,255,.15);border-radius:18px;padding:2rem;max-width:900px;width:100%;margin:auto;position:relative;}
+.sec-modal-close{position:absolute;top:16px;right:18px;background:rgba(255,255,255,.08);border:none;color:#fff;width:38px;height:38px;border-radius:50%;font-size:1.1rem;cursor:pointer;}
+.sec-modal-title{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:#e8f8ff;margin-bottom:8px;}
+.sec-modal-note{color:#a0d8f0;font-size:.92rem;margin-bottom:24px;line-height:1.7;}
+.sec-modal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;}
+.sec-photo-item{border-radius:12px;overflow:hidden;cursor:pointer;transition:.2s;border:1px solid rgba(0,212,255,.1);}
+.sec-photo-item:hover{transform:scale(1.03);}
+.sec-photo-item img{width:100%;height:200px;object-fit:cover;display:block;}
+.sec-photo-cap{padding:8px 12px;font-size:.82rem;color:#a0d8f0;background:rgba(5,20,40,.85);}
+/* SEC LIGHTBOX */
+#sec-lightbox{position:fixed;inset:0;z-index:700;background:rgba(0,0,0,.93);display:none;align-items:center;justify-content:center;padding:20px;}
+#sec-lightbox.open{display:flex;}
+#sec-lightbox img{max-width:90vw;max-height:85vh;object-fit:contain;border-radius:12px;}
+#sec-lb-close{position:absolute;top:20px;right:24px;background:rgba(255,255,255,.1);border:none;color:#fff;width:44px;height:44px;border-radius:50%;font-size:1.3rem;cursor:pointer;}
+/* ADMIN PANEL */
+#admin-panel{position:fixed;inset:0;z-index:900;background:rgba(2,11,24,.97);backdrop-filter:blur(20px);display:none;overflow-y:auto;}
+#admin-panel.active{display:block;}
+/* TOAST */
+.toast{position:fixed;bottom:30px;right:30px;z-index:9999;padding:14px 24px;border-radius:10px;background:var(--deep);border:1px solid rgba(0,212,255,.25);color:#e8f8ff;font-size:.9rem;transform:translateY(20px);opacity:0;transition:.3s;pointer-events:none;min-width:220px;}
+.toast.show{transform:translateY(0);opacity:1;}
+.toast.success{border-color:rgba(0,212,255,.4);}
+.toast.error{border-color:rgba(255,64,96,.4);color:#ff8080;}
+/* MOBILE */
+@media(max-width:768px){
+  .nav-links{display:none;}
+  .nav-btn span{display:none;}
+  .nav-actions{gap:6px;}
+  .nav-btn{padding:8px 10px;}
+  .section{padding:70px 20px;}
+  .contact-box{padding:24px 18px;}
+  .cards,.product-grid{grid-template-columns:1fr;}
+  .hero h1{font-size:clamp(2.8rem,12vw,4.5rem);}
+  .btn-group{flex-direction:column;align-items:center;}
+  .btn{width:100%;max-width:280px;justify-content:center;}
+  .sec-modal-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+<canvas id="aqua-canvas"></canvas>
+<div class="toast" id="toast"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">
+    <div class="logo-name">Aqua<span>Star</span></div>
+    <div class="logo-sub">Mangalore</div>
+  </div>
+  <div class="nav-links">
+    <a href="#home" class="active">Home</a>
+    <a href="#products">Shop</a>
+    <a href="#pets">Gallery</a>
+    <a href="#pets">Services</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="nav-actions">
+    <a href="tel:+919876543210" class="nav-btn">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+      Call Us
+    </a>
+    <a href="https://wa.me/919876543210" target="_blank" class="nav-btn nav-btn-wa">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="hero-badge">Premium Pet Store &bull; Mangalore</div>
+    <h1>Aqua Star</h1>
+    <p>Discover premium fish, birds, dogs, cats, reptiles, aquariums, pet food, accessories, and more &mdash; all under one roof in Mangalore.</p>
+    <div class="btn-group">
+      <a href="#pets" class="btn btn-primary">Explore Pets</a>
+      <a href="#contact" class="btn btn-outline">Contact Us</a>
+    </div>
+  </div>
+  <div class="scroll-ind"><div class="scroll-chev"></div><div class="scroll-chev"></div><div class="scroll-chev"></div></div>
+</section>
+<hr class="sdiv"/>
+
+<!-- PETS -->
+<section class="section" id="pets">
+  <div class="section-header">
+    <div class="section-tag">What We Offer</div>
+    <h2 class="section-title">Our Pets</h2>
+  </div>
+  <div class="cards">
+    <div class="card" onclick="openSectionModal('fish')"><img src="https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?q=80&w=1200&auto=format&fit=crop" loading="lazy" alt="Fish"/><div class="card-content"><h3>Aquarium Fish</h3><p>Exotic freshwater and marine fish with premium tanks and accessories.</p><button class="pet-explore-btn">Tap to explore &#8250;</button></div></div>
+    <div class="card" onclick="openSectionModal('birds')"><img src="https://images.unsplash.com/photo-1606567595334-d39972c85dbe?q=80&w=1200&auto=format&fit=crop" loading="lazy" alt="Birds"/><div class="card-content"><h3>Birds</h3><p>Colourful parrots, budgies, and exotic birds with cages and feed.</p><button class="pet-explore-btn">Tap to explore &#8250;</button></div></div>
+    <div class="card" onclick="openSectionModal('cats')"><img src="https://images.unsplash.com/photo-1511044568932-338cba0ad803?q=80&w=1200&auto=format&fit=crop" loading="lazy" alt="Cats"/><div class="card-content"><h3>Cats</h3><p>Beautiful cat breeds with imported accessories and grooming essentials.</p><button class="pet-explore-btn">Tap to explore &#8250;</button></div></div>
+  </div>
+</section>
+<hr class="sdiv"/>
+
+<!-- PRODUCTS -->
+<section class="section" id="products">
+  <div class="section-header"><div class="section-tag">Browse &amp; Order</div><h2 class="section-title">Our Products</h2></div>
+  <div class="filter-bar" id="filter-bar"></div>
+  <div class="product-grid" id="product-grid"></div>
+</section>
+<hr class="sdiv"/>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="section-header"><div class="section-tag">Find Us</div><h2 class="section-title">Contact Us</h2></div>
+
+  <div style="max-width:560px;margin:auto;border-radius:18px;overflow:hidden;border:1px solid rgba(0,212,255,.12);">
+    <div style="background:rgba(5,15,35,.92);padding:36px 32px;backdrop-filter:blur(12px);">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;">
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;color:#e8f8ff;">Store Info</h3>
+        <span style="display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:99px;background:rgba(0,200,83,.1);border:1px solid rgba(0,200,83,.25);font-size:.7rem;letter-spacing:.1em;color:#00e676;">
+          <span style="width:6px;height:6px;border-radius:50%;background:#00e676;display:inline-block;animation:pulse 2s infinite;"></span>
+          Open Now
+        </span>
+      </div>
+
+      <!-- Address -->
+      <div style="display:flex;gap:14px;margin-bottom:22px;align-items:flex-start;">
+        <div style="width:36px;height:36px;border-radius:9px;background:rgba(0,212,255,.08);border:1px solid rgba(0,212,255,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="1.8" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div>
+          <div style="font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(0,212,255,.7);margin-bottom:5px;">Address</div>
+          <div style="color:#c8e8ff;font-size:.88rem;line-height:1.7;">Shop #G38, Ground Floor, Smart City<br/>Thokkottu, Mangaluru &mdash; 575 006<br/>Karnataka, India</div>
+        </div>
+      </div>
+
+      <!-- Phone -->
+      <div style="display:flex;gap:14px;margin-bottom:22px;align-items:flex-start;">
+        <div style="width:36px;height:36px;border-radius:9px;background:rgba(0,212,255,.08);border:1px solid rgba(0,212,255,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="1.8" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.4 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <div>
+          <div style="font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(0,212,255,.7);margin-bottom:5px;">Phone</div>
+          <div style="color:#c8e8ff;font-size:.88rem;">+91 98765 43210</div>
+        </div>
+      </div>
+
+      <!-- Hours -->
+      <div style="display:flex;gap:14px;margin-bottom:22px;align-items:flex-start;">
+        <div style="width:36px;height:36px;border-radius:9px;background:rgba(0,212,255,.08);border:1px solid rgba(0,212,255,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div>
+          <div style="font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(0,212,255,.7);margin-bottom:5px;">Store Hours</div>
+          <div style="color:#c8e8ff;font-size:.88rem;line-height:1.7;">Monday &ndash; Saturday: 9:00 AM &ndash; 8:00 PM<br/>Sunday: 10:00 AM &ndash; 6:00 PM</div>
+        </div>
+      </div>
+
+      <!-- WhatsApp -->
+      <div style="display:flex;gap:14px;align-items:flex-start;">
+        <div style="width:36px;height:36px;border-radius:9px;background:rgba(0,212,255,.08);border:1px solid rgba(0,212,255,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#00d4ff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </div>
+        <div>
+          <div style="font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(0,212,255,.7);margin-bottom:5px;">WhatsApp</div>
+          <div style="color:#c8e8ff;font-size:.88rem;">+91 98765 43210</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Open in Maps button -->
+  <div style="text-align:center;margin-top:24px;">
+    <a href="https://maps.app.goo.gl/KhdgQhCw1T6q37PTA" target="_blank"
+      style="display:inline-flex;align-items:center;gap:10px;padding:13px 28px;border-radius:10px;background:rgba(0,212,255,.08);border:1px solid rgba(0,212,255,.25);color:#a0d8f0;font-family:'DM Sans',sans-serif;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:.2s;"
+      onmouseover="this.style.background='rgba(0,212,255,.18)';this.style.color='#fff'"
+      onmouseout="this.style.background='rgba(0,212,255,.08)';this.style.color='#a0d8f0'">
+      &#128205; Open in Maps
+    </a>
+  </div>
+
+</section>
+<footer>&copy; 2026 Aqua Star &nbsp;&bull;&nbsp; All Rights Reserved &nbsp;&bull;&nbsp; Mangaluru, Karnataka</footer>
+
+<div style="text-align:center;padding:24px;background:rgba(2,11,24,.8);border-top:1px solid rgba(0,212,255,.06);position:relative;z-index:10;">
+  <a href="#" onclick="openAdmin(event)" style="display:inline-flex;align-items:center;gap:8px;padding:10px 28px;border-radius:10px;border:1px solid rgba(0,212,255,.2);background:rgba(0,212,255,.06);color:rgba(158,207,232,.5);font-family:'DM Sans',sans-serif;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;transition:.2s;" onmouseover="this.style.borderColor='rgba(0,212,255,.4)';this.style.color='#a0d8f0';this.style.background='rgba(0,212,255,.1)'" onmouseout="this.style.borderColor='rgba(0,212,255,.2)';this.style.color='rgba(158,207,232,.5)';this.style.background='rgba(0,212,255,.06)'">&#9881; Admin</a>
+</div>
+
+<!-- PRODUCT LIGHTBOX -->
+<div id="lightbox"><button id="lightbox-close" onclick="closeLightbox()">&#10005;</button><img id="lightbox-img" src="" alt=""/></div>
+
+<!-- SECTION GALLERY MODAL -->
+<div id="sec-modal">
+  <div class="sec-modal-inner">
+    <button class="sec-modal-close" onclick="closeSectionModal()">&#10005;</button>
+    <div class="sec-modal-title" id="sec-modal-title"></div>
+    <div class="sec-modal-note" id="sec-modal-note"></div>
+    <div class="sec-modal-grid" id="sec-modal-grid"></div>
+  </div>
+</div>
+<div id="sec-lightbox"><button id="sec-lb-close" onclick="closeSecLightbox()">&#10005;</button><img id="sec-lb-img" src="" alt=""/></div>
+
+<!-- ═══════════ ADMIN PANEL ═══════════ -->
+<div id="admin-panel">
+<style>
+/* Admin panel internal styles */
+#admin-panel{font-family:'DM Sans',sans-serif;}
+.ap-wrap{max-width:1100px;margin:auto;padding:0 20px 60px;}
+.ap-topbar{height:60px;background:rgba(5,20,40,.98);border-bottom:1px solid rgba(0,212,255,.1);display:flex;align-items:center;justify-content:space-between;padding:0 24px;position:sticky;top:0;z-index:10;}
+.ap-logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;color:#e8f8ff;}
+.ap-logo span{color:#00d4ff;}
+.ap-close{padding:8px 18px;border:1px solid rgba(255,100,100,.3);border-radius:8px;color:#ff8080;background:transparent;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;transition:.2s;}
+.ap-close:hover{background:rgba(255,80,80,.1);}
+.ap-nav{display:flex;gap:6px;padding:20px 0 0;flex-wrap:wrap;}
+.ap-tab{padding:9px 20px;border-radius:8px;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;border:1px solid transparent;font-family:'DM Sans',sans-serif;color:rgba(158,207,232,.5);background:transparent;transition:all .2s;}
+.ap-tab:hover{color:#9ecfe8;background:rgba(0,212,255,.05);}
+.ap-tab.active{background:rgba(0,212,255,.12);border-color:rgba(0,212,255,.25);color:#00d4ff;}
+.ap-page{display:none;padding-top:28px;}
+.ap-page.active{display:block;}
+.ap-card{background:rgba(5,20,40,.7);border:1px solid rgba(0,212,255,.1);border-radius:16px;backdrop-filter:blur(12px);padding:24px;margin-bottom:20px;}
+.ap-label{display:block;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(158,207,232,.45);margin-bottom:6px;}
+.ap-input{width:100%;background:rgba(2,11,24,.7);border:1px solid rgba(0,212,255,.15);border-radius:8px;padding:11px 14px;font-size:.875rem;font-family:'DM Sans',sans-serif;color:#cce4f5;outline:none;transition:border-color .2s;}
+.ap-input:focus{border-color:rgba(0,212,255,.5);}
+.ap-input::placeholder{color:rgba(158,207,232,.28);}
+select.ap-input option{background:#051428;color:#cce4f5;}
+.ap-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:'DM Sans',sans-serif;font-size:.78rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;padding:10px 20px;border-radius:8px;cursor:pointer;border:1px solid transparent;transition:.2s;white-space:nowrap;}
+.ap-btn-primary{background:linear-gradient(135deg,#00d4ff,#0090ff);color:#fff;box-shadow:0 0 18px rgba(0,212,255,.2);}
+.ap-btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,212,255,.35);}
+.ap-btn-ghost{background:transparent;color:#9ecfe8;border-color:rgba(0,212,255,.25);}
+.ap-btn-ghost:hover{background:rgba(0,212,255,.07);border-color:rgba(0,212,255,.5);color:#fff;}
+.ap-btn-danger{background:rgba(239,68,68,.12);color:#f87171;border-color:rgba(239,68,68,.25);}
+.ap-btn-danger:hover{background:rgba(239,68,68,.22);}
+.ap-stat{background:rgba(5,20,40,.65);border:1px solid rgba(0,212,255,.1);border-radius:14px;padding:20px 22px;}
+.ap-stat-num{font-size:1.9rem;font-weight:300;background:linear-gradient(135deg,#00d4ff,#0090ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.ap-stat-label{font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(158,207,232,.4);margin-bottom:6px;}
+.ap-upload-zone{border:2px dashed rgba(0,212,255,.22);border-radius:12px;padding:36px 24px;text-align:center;cursor:pointer;transition:.3s;position:relative;background:rgba(0,212,255,.02);}
+.ap-upload-zone:hover,.ap-upload-zone.dragover{border-color:rgba(0,212,255,.5);background:rgba(0,212,255,.05);}
+.ap-upload-zone input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;}
+.ap-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px;}
+.ap-thumb{position:relative;border-radius:12px;overflow:hidden;background:rgba(5,20,40,.8);border:1px solid rgba(0,212,255,.1);transition:.25s;}
+.ap-thumb:hover{border-color:rgba(0,212,255,.3);}
+.ap-thumb img{width:100%;height:150px;object-fit:cover;display:block;filter:brightness(.85);transition:.3s;}
+.ap-thumb:hover img{filter:brightness(1);}
+.ap-thumb-info{padding:10px 12px;}
+.ap-thumb-info p{font-size:.78rem;color:#cce4f5;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.ap-thumb-info span{font-size:.68rem;color:rgba(158,207,232,.4);}
+.ap-thumb-del{position:absolute;top:7px;right:7px;background:rgba(239,68,68,.8);border:none;color:#fff;width:26px;height:26px;border-radius:6px;cursor:pointer;font-size:.8rem;display:none;align-items:center;justify-content:center;}
+.ap-thumb:hover .ap-thumb-del{display:flex;}
+.ap-filter-bar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:20px;}
+.ap-filter{padding:7px 16px;border-radius:99px;border:1px solid rgba(0,212,255,.2);background:transparent;color:rgba(158,207,232,.5);cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.75rem;transition:.2s;}
+.ap-filter.active{background:rgba(0,212,255,.15);border-color:#00d4ff;color:#fff;}
+.ap-preview-strip{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px;}
+.ap-prev-item{position:relative;width:80px;height:64px;border-radius:8px;overflow:hidden;border:1px solid rgba(0,212,255,.15);}
+.ap-prev-item img{width:100%;height:100%;object-fit:cover;}
+.ap-prev-item button{position:absolute;top:2px;right:2px;width:18px;height:18px;border-radius:50%;background:rgba(239,68,68,.85);border:none;cursor:pointer;color:#fff;font-size:10px;}
+.ap-progress{height:4px;border-radius:99px;background:rgba(0,212,255,.1);overflow:hidden;margin-top:14px;display:none;}
+.ap-progress-fill{height:100%;background:linear-gradient(90deg,#00d4ff,#0090ff);border-radius:99px;transition:width .4s ease;width:0%;}
+.ap-empty{text-align:center;padding:50px 20px;color:rgba(158,207,232,.3);font-size:.875rem;}
+.ap-grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+@media(max-width:600px){.ap-grid2{grid-template-columns:1fr;}.ap-gallery{grid-template-columns:repeat(auto-fill,minmax(140px,1fr));}}
+</style>
+
+  <div class="ap-topbar">
+    <div class="ap-logo">Aqua<span>&#9733;</span>Star <span style="font-size:.75rem;color:rgba(158,207,232,.4);font-family:'DM Sans',sans-serif;margin-left:8px">Admin</span></div>
+    <button class="ap-close" onclick="closeAdmin()">&#10005; Close</button>
+  </div>
+
+  <!-- LOGIN -->
+  <div id="ap-login" style="display:flex;align-items:center;justify-content:center;min-height:calc(100vh - 60px);padding:20px;">
+    <div style="background:rgba(5,20,40,.8);border:1px solid rgba(0,212,255,.15);border-radius:20px;padding:40px 36px;width:100%;max-width:400px;backdrop-filter:blur(16px);">
+      <div style="text-align:center;margin-bottom:28px;">
+        <div class="ap-logo" style="font-size:1.8rem;margin-bottom:6px;">Aqua<span>&#9733;</span>Star</div>
+        <p style="font-size:.8rem;color:rgba(158,207,232,.4);letter-spacing:.1em;">ADMIN PANEL</p>
+      </div>
+      <div id="ap-login-err" style="display:none;background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.2);border-radius:8px;padding:10px 14px;font-size:.82rem;color:#f87171;margin-bottom:16px;"></div>
+      <div style="margin-bottom:16px;"><label class="ap-label">Username</label><input id="ap-user" type="text" class="ap-input" placeholder="admin" autocomplete="username" onkeydown="if(event.key==='Enter')apLogin()"/></div>
+      <div style="margin-bottom:24px;"><label class="ap-label">Password</label><input id="ap-pass" type="password" class="ap-input" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" autocomplete="current-password" onkeydown="if(event.key==='Enter')apLogin()"/></div>
+      <button onclick="apLogin()" class="ap-btn ap-btn-primary" style="width:100%;padding:13px;">Sign In</button>
+
+    </div>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div id="ap-dashboard" style="display:none;">
+    <div class="ap-wrap">
+      <div class="ap-nav">
+        <button class="ap-tab active" onclick="apShowPage('dash',this)">Dashboard</button>
+        <button class="ap-tab" onclick="apShowPage('upload',this)">Upload Photos</button>
+        <button class="ap-tab" onclick="apShowPage('gallery',this)">Gallery</button>
+        <button class="ap-tab" onclick="apShowPage('products',this)">Products</button>
+        <button class="ap-tab" onclick="apShowPage('sections',this)">Section Notes</button>
+      </div>
+
+      <!-- DASH PAGE -->
+      <div id="ap-page-dash" class="ap-page active">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin-bottom:24px;">
+          <div class="ap-stat"><div class="ap-stat-label">Total Photos</div><div class="ap-stat-num" id="ap-stat-total">0</div></div>
+          <div class="ap-stat"><div class="ap-stat-label">Fish</div><div class="ap-stat-num" id="ap-stat-fish">0</div></div>
+          <div class="ap-stat"><div class="ap-stat-label">Birds</div><div class="ap-stat-num" id="ap-stat-birds">0</div></div>
+          <div class="ap-stat"><div class="ap-stat-label">Dogs</div><div class="ap-stat-num" id="ap-stat-dogs">0</div></div>
+          <div class="ap-stat"><div class="ap-stat-label">Products</div><div class="ap-stat-num" id="ap-stat-prods">0</div></div>
+        </div>
+        <div class="ap-card">
+          <p style="font-size:.82rem;font-weight:500;color:#e8f8ff;margin-bottom:16px;">Quick Actions</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;">
+            <button onclick="apShowPage('upload',document.querySelector('.ap-tab:nth-child(2)'))" class="ap-btn ap-btn-primary">Upload Photos</button>
+            <button onclick="apShowPage('gallery',document.querySelector('.ap-tab:nth-child(3)'))" class="ap-btn ap-btn-ghost">Manage Gallery</button>
+            <button onclick="apShowPage('products',document.querySelector('.ap-tab:nth-child(4)'))" class="ap-btn ap-btn-ghost">Manage Products</button>
+          </div>
+        </div>
+        <div class="ap-card">
+          <p style="font-size:.82rem;font-weight:500;color:#e8f8ff;margin-bottom:14px;">Recent Photos</p>
+          <div id="ap-recent" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(70px,1fr));gap:8px;"></div>
+        </div>
+      </div>
+
+      <!-- UPLOAD PAGE -->
+      <div id="ap-page-upload" class="ap-page">
+        <div class="ap-card">
+          <p style="font-size:.9rem;font-weight:500;color:#e8f8ff;margin-bottom:20px;">Upload Photos to Gallery</p>
+          <div class="ap-upload-zone" id="ap-drop-zone">
+            <input type="file" id="ap-file-input" accept="image/*" multiple onchange="apHandleFiles(this.files)"/>
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(0,212,255,.4)" stroke-width="1.5" stroke-linecap="round" style="margin:0 auto 10px;display:block"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            <p style="font-size:.875rem;color:rgba(158,207,232,.5);margin-bottom:4px;">Drag &amp; drop images, or <span style="color:#00d4ff;">click to browse</span></p>
+            <p style="font-size:.72rem;color:rgba(158,207,232,.3);">JPG, PNG, WebP &middot; Multiple files allowed</p>
+          </div>
+          <div id="ap-previews" class="ap-preview-strip"></div>
+          <div class="ap-grid2" style="margin-top:18px;">
+            <div><label class="ap-label">Photo Title *</label><input id="ap-up-label" type="text" class="ap-input" placeholder="e.g. Betta Fish, Macaw Parrot..."/></div>
+            <div><label class="ap-label">Category *</label>
+              <select id="ap-up-cat" class="ap-input">
+                <option value="">— Select —</option>
+                <option value="fish">Fish</option>
+                <option value="birds">Birds</option>
+                <option value="dogs">Dogs</option>
+                <option value="cats">Cats</option>
+                <option value="reptiles">Reptiles</option>
+                <option value="food">Food &amp; Supplements</option>
+              </select>
+            </div>
+          </div>
+          <div class="ap-progress" id="ap-progress"><div class="ap-progress-fill" id="ap-prog-fill"></div></div>
+          <div style="display:flex;gap:10px;margin-top:18px;">
+            <button onclick="apSubmitUpload()" class="ap-btn ap-btn-primary" style="flex:1;padding:12px;">Add to Gallery</button>
+            <button onclick="apClearUpload()" class="ap-btn ap-btn-ghost" style="padding:12px;">Clear</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- GALLERY PAGE -->
+      <div id="ap-page-gallery" class="ap-page">
+        <div class="ap-filter-bar" id="ap-filter-bar">
+          <button class="ap-filter active" onclick="apMgrFilter('all',this)">All</button>
+          <button class="ap-filter" onclick="apMgrFilter('fish',this)">Fish</button>
+          <button class="ap-filter" onclick="apMgrFilter('birds',this)">Birds</button>
+          <button class="ap-filter" onclick="apMgrFilter('dogs',this)">Dogs</button>
+          <button class="ap-filter" onclick="apMgrFilter('cats',this)">Cats</button>
+          <button class="ap-filter" onclick="apMgrFilter('reptiles',this)">Reptiles</button>
+          <button class="ap-filter" onclick="apMgrFilter('food',this)">Food</button>
+        </div>
+        <p id="ap-gal-count" style="font-size:.72rem;color:rgba(158,207,232,.35);letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px;"></p>
+        <div id="ap-gal-grid" class="ap-gallery"></div>
+        <div id="ap-gal-empty" class="ap-empty" style="display:none;">No photos in this category.</div>
+      </div>
+
+      <!-- PRODUCTS PAGE -->
+      <div id="ap-page-products" class="ap-page">
+        <div class="ap-card" style="margin-bottom:20px;">
+          <p style="font-size:.9rem;font-weight:500;color:#e8f8ff;margin-bottom:20px;">Add Product</p>
+          <div class="ap-upload-zone" id="ap-prod-drop">
+            <input type="file" id="ap-prod-file" accept="image/*" onchange="apProdFile(this.files)"/>
+            <p style="font-size:.875rem;color:rgba(158,207,232,.5);">Click to select product image</p>
+          </div>
+          <img id="ap-prod-preview" src="" alt="" style="display:none;width:100%;max-height:200px;object-fit:cover;border-radius:10px;margin-top:12px;"/>
+          <div class="ap-grid2" style="margin-top:16px;">
+            <div><label class="ap-label">Product Name *</label><input id="ap-prod-name" type="text" class="ap-input" placeholder="e.g. Koi Fish"/></div>
+            <div><label class="ap-label">Category *</label>
+              <select id="ap-prod-cat" class="ap-input">
+                <option value="">— Select Category —</option><option value="Fish">Fish</option><option value="Dogs">Dogs</option>
+                <option value="Cats">Cats</option><option value="Birds">Birds</option><option value="Reptiles">Reptiles</option>
+                <option value="Food">Pet Food</option><option value="Accessories">Accessories</option><option value="Aquarium">Aquarium</option>
+              </select>
+            </div>
+            <div><label class="ap-label">Price (&#8377;)</label><input id="ap-prod-price" type="number" class="ap-input" placeholder="0" min="0"/></div>
+            <div><label class="ap-label">Stock</label>
+              <select id="ap-prod-stock" class="ap-input">
+                <option value="in">In Stock</option><option value="out">Out of Stock</option>
+                <option value="limited">Limited</option><option value="preorder">Pre-Order</option>
+              </select>
+            </div>
+          </div>
+          <div style="margin-top:12px;"><label class="ap-label">Description</label><textarea id="ap-prod-desc" class="ap-input" style="resize:vertical;min-height:70px;" placeholder="Short description..."></textarea></div>
+          <div style="margin-top:12px;"><label class="ap-label">WhatsApp Number</label><input id="ap-prod-wa" type="text" class="ap-input" placeholder="919876543210" value="919876543210"/></div>
+          <button onclick="apSaveProd()" class="ap-btn ap-btn-primary" style="margin-top:16px;width:100%;padding:12px;">Save Product</button>
+        </div>
+        <div class="ap-card">
+          <p style="font-size:.82rem;font-weight:500;color:#e8f8ff;margin-bottom:14px;">Existing Products</p>
+          <div id="ap-prod-list"></div>
+        </div>
+      </div>
+
+      <!-- SECTION NOTES PAGE -->
+      <div id="ap-page-sections" class="ap-page">
+        <div class="ap-filter-bar" id="ap-sec-pills">
+          <button class="ap-filter active" onclick="apSecSwitch('fish',this)">Fish</button>
+          <button class="ap-filter" onclick="apSecSwitch('birds',this)">Birds</button>
+          <button class="ap-filter" onclick="apSecSwitch('dogs',this)">Dogs</button>
+          <button class="ap-filter" onclick="apSecSwitch('cats',this)">Cats</button>
+          <button class="ap-filter" onclick="apSecSwitch('reptiles',this)">Reptiles</button>
+          <button class="ap-filter" onclick="apSecSwitch('food',this)">Food</button>
+        </div>
+        <div class="ap-card">
+          <label class="ap-label">Section note shown to visitors:</label>
+          <textarea id="ap-sec-note" class="ap-input" style="resize:vertical;min-height:90px;margin-bottom:10px;" maxlength="500" oninput="document.getElementById('ap-sec-counter').textContent=this.value.length+' / 500'"></textarea>
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <span id="ap-sec-counter" style="font-size:.72rem;color:rgba(158,207,232,.4);">0 / 500</span>
+            <button onclick="apSaveSecNote()" class="ap-btn ap-btn-primary" style="padding:8px 20px;font-size:.75rem;">Save Note</button>
+          </div>
+          <div id="ap-sec-saved" style="display:none;color:#00e676;font-size:.8rem;margin-top:8px;">Saved!</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+/* ═══════════ CONSTANTS ═══════════ */
+const AP_USER = 'admin', AP_PASS = 'aquastar2025';
+const LS_PRODS = 'aquastar_products_v2';
+const LS_SECS  = 'aquastar_sections_v1';
+const WA_DEF   = '919876543210';
+
+/* ── Cloudinary ── */
+const CLD_CLOUD  = 'dst3d5tjb';
+const CLD_PRESET = 'aquastar_uploads';
+const CLD_URL    = `https://api.cloudinary.com/v1_1/${CLD_CLOUD}/image/upload`;
+
+/* ── Supabase ── */
+const SB_URL  = 'https://zyovbymdxroaqluzhjgx.supabase.co';
+const SB_KEY  = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp5b3ZieW1keHJvYXFsdXpoamd4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgyMTA5MDAsImV4cCI6MjA5Mzc4NjkwMH0.YYrS1b3HXw06KVDSDzV3Rg9pSFNmsD_bHcZKmh8W44k';
+const SB_HDR  = {'Content-Type':'application/json','apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY};
+
+/* Supabase helpers */
+async function sbFetch(path,opts={}){
+  const r=await fetch(SB_URL+path,{headers:SB_HDR,...opts});
+  if(!r.ok){const e=await r.text();throw new Error(e);}
+  return r.json();
+}
+async function sbGetGallery(cat){
+  const q=cat&&cat!=='all'?`?category=eq.${cat}&order=created_at.desc`:`?order=created_at.desc`;
+  return sbFetch('/rest/v1/gallery'+q);
+}
+async function sbInsertPhoto(row){
+  return sbFetch('/rest/v1/gallery',{method:'POST',body:JSON.stringify(row),headers:{...SB_HDR,'Prefer':'return=representation'}});
+}
+async function sbDeletePhoto(id){
+  return fetch(SB_URL+`/rest/v1/gallery?id=eq.${id}`,{method:'DELETE',headers:SB_HDR});
+}
+
+/* ═══════════ STATE ═══════════ */
+let apLoggedIn = false;
+let apGallery  = [];
+let apPendingFiles = [];
+let apProdPending  = null;
+let apActiveSec    = 'fish';
+let apMgrCat       = 'all';
+let activeFilter   = 'All';
+
+/* ═══════════ STORAGE (products & sections stay local) ═══════════ */
+function getProds(){try{return JSON.parse(localStorage.getItem(LS_PRODS))||[];}catch(e){return[];}}
+function saveProds(a){try{localStorage.setItem(LS_PRODS,JSON.stringify(a));return true;}catch(e){showToast('Storage full!','error');return false;}}
+function getSecs(){try{const d=JSON.parse(localStorage.getItem(LS_SECS));if(d)return d;}catch(e){}return{fish:{note:''},birds:{note:''},dogs:{note:''},cats:{note:''},reptiles:{note:''},food:{note:''}};}
+function saveSecs(o){localStorage.setItem(LS_SECS,JSON.stringify(o));}
+if(!localStorage.getItem(LS_SECS))saveSecs(getSecs());
+
+/* ═══════════ HELPERS ═══════════ */
+function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function genId(){return 'id_'+Date.now()+'_'+Math.random().toString(36).slice(2,6);}
+function showToast(msg,type='success'){const t=document.getElementById('toast');t.textContent=msg;t.className='toast '+type;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3200);}
+function stockBadge(s){const m={in:{c:'badge-stock-in',l:'In Stock'},out:{c:'badge-stock-out',l:'Out of Stock'},limited:{c:'badge-stock-out',l:'Limited'},preorder:{c:'badge-custom',l:'Pre-Order'}};const x=m[s]||m.in;return`<span class="badge-tag ${x.c}">${x.l}</span>`;}
+function priceDisplay(p){if(!p||p==0)return`<span style="color:rgba(204,228,245,.5);font-size:.88rem">Contact for Price</span>`;return`&#8377;${parseFloat(p).toLocaleString('en-IN')}<span> / item</span>`;}
+function waLink(n,name){const num=n||WA_DEF;return`https://wa.me/${num}?text=${encodeURIComponent('Hi! I\'m interested in: *'+name+'* from Aqua Star, Mangalore.')}`;}
+const waSVG=`<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>`;
+
+/* ═══════════ ADMIN OPEN/CLOSE ═══════════ */
+function openAdmin(e){
+  e.preventDefault();
+  document.getElementById('admin-panel').classList.add('active');
+  if(apLoggedIn) apShowDashboard();
+  else { document.getElementById('ap-login').style.display='flex'; document.getElementById('ap-dashboard').style.display='none'; }
+}
+function closeAdmin(){document.getElementById('admin-panel').classList.remove('active');}
+
+/* ═══════════ ADMIN LOGIN ═══════════ */
+function apLogin(){
+  const u=document.getElementById('ap-user').value.trim();
+  const p=document.getElementById('ap-pass').value;
+  const err=document.getElementById('ap-login-err');
+  if(u===AP_USER&&p===AP_PASS){
+    apLoggedIn=true;err.style.display='none';
+    apShowDashboard();
+  } else {
+    err.style.display='block';err.textContent='Incorrect username or password.';
+    document.getElementById('ap-pass').value='';
+    setTimeout(()=>err.style.display='none',3500);
+  }
+}
+function apShowDashboard(){
+  document.getElementById('ap-login').style.display='none';
+  document.getElementById('ap-dashboard').style.display='block';
+  apLoadGallery().then(()=>{apUpdateStats();apRenderRecent();apRenderGallery();apRenderProdList();});
+}
+
+/* ═══════════ LOAD GALLERY FROM SUPABASE ═══════════ */
+async function apLoadGallery(){
+  try{
+    apGallery = await sbGetGallery();
+  } catch(e){
+    showToast('Could not load gallery: '+e.message,'error');
+    apGallery=[];
+  }
+}
+
+/* ═══════════ ADMIN NAV ═══════════ */
+function apShowPage(id,btn){
+  document.querySelectorAll('.ap-page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.ap-tab').forEach(b=>b.classList.remove('active'));
+  document.getElementById('ap-page-'+id).classList.add('active');
+  if(btn)btn.classList.add('active');
+  if(id==='gallery')apLoadGallery().then(()=>apRenderGallery());
+  if(id==='products')apRenderProdList();
+  if(id==='dash')apLoadGallery().then(()=>{apUpdateStats();apRenderRecent();});
+  if(id==='sections')apLoadSecNote();
+}
+
+/* ═══════════ STATS ═══════════ */
+function apUpdateStats(){
+  document.getElementById('ap-stat-total').textContent=apGallery.length;
+  ['fish','birds','dogs'].forEach(c=>document.getElementById('ap-stat-'+c).textContent=apGallery.filter(g=>g.category===c).length);
+  document.getElementById('ap-stat-prods').textContent=getProds().length;
+}
+function apRenderRecent(){
+  const el=document.getElementById('ap-recent');
+  const items=[...apGallery].slice(0,10);
+  if(!items.length){el.innerHTML='<p style="font-size:.8rem;color:rgba(158,207,232,.3)">No photos yet.</p>';return;}
+  el.innerHTML=items.map(p=>`<div style="border-radius:8px;overflow:hidden;border:1px solid rgba(0,212,255,.1);cursor:pointer" onclick="apOpenLightbox('${esc(p.url)}')"><img src="${p.url}" alt="${esc(p.label)}" style="width:100%;height:56px;object-fit:cover;display:block;filter:brightness(.8)"/></div>`).join('');
+}
+
+/* ═══════════ GALLERY UPLOAD ═══════════ */
+function apHandleFiles(files){
+  if(!files||!files.length)return;
+  apPendingFiles=[];
+  document.getElementById('ap-previews').innerHTML='';
+  Array.from(files).forEach((file,i)=>{
+    if(!file.type.startsWith('image/'))return;
+    apPendingFiles.push({blob:file, name:file.name});
+    const reader=new FileReader();
+    reader.onload=e=>apAddPreview(e.target.result,i);
+    reader.readAsDataURL(file);
+  });
+}
+function apAddPreview(src,i){
+  const strip=document.getElementById('ap-previews');
+  const d=document.createElement('div');d.className='ap-prev-item';d.id='aprev-'+i;
+  d.innerHTML=`<img src="${src}" alt=""/><button onclick="apRemovePreview(${i})">&#10005;</button>`;
+  strip.appendChild(d);
+}
+function apRemovePreview(i){apPendingFiles.splice(i,1);document.getElementById('aprev-'+i)?.remove();}
+
+async function apSubmitUpload(){
+  const label=document.getElementById('ap-up-label').value.trim();
+  const cat=document.getElementById('ap-up-cat').value;
+  if(!label){showToast('Enter a photo title.','error');return;}
+  if(!cat){showToast('Select a category.','error');return;}
+  if(!apPendingFiles.length){showToast('Select at least one image.','error');return;}
+
+  const prog=document.getElementById('ap-progress'),fill=document.getElementById('ap-prog-fill');
+  prog.style.display='block';
+
+  let uploaded=0;
+  for(let i=0;i<apPendingFiles.length;i++){
+    const f=apPendingFiles[i];
+    try{
+      // 1. Upload to Cloudinary
+      fill.style.width=Math.round((i/apPendingFiles.length)*60)+'%';
+      const fd=new FormData();
+      fd.append('file', f.blob||f.src);
+      fd.append('upload_preset', CLD_PRESET);
+      fd.append('folder','aquastar');
+      const cldRes=await fetch(CLD_URL,{method:'POST',body:fd});
+      if(!cldRes.ok)throw new Error('Cloudinary upload failed');
+      const cldData=await cldRes.json();
+      const url=cldData.secure_url;
+
+      // 2. Save URL to Supabase
+      fill.style.width=Math.round(60+(i/apPendingFiles.length)*35)+'%';
+      await sbInsertPhoto({url, label, category:cat});
+      uploaded++;
+    } catch(e){
+      showToast('Error uploading photo '+(i+1)+': '+e.message,'error');
+    }
+  }
+
+  fill.style.width='100%';
+  await apLoadGallery();
+  apUpdateStats();apRenderRecent();apRenderGallery();
+  showToast(`${uploaded} photo${uploaded!==1?'s':''} uploaded!`,'success');
+  apClearUpload();
+  setTimeout(()=>{prog.style.display='none';fill.style.width='0%';},600);
+}
+function apClearUpload(){
+  apPendingFiles=[];
+  document.getElementById('ap-previews').innerHTML='';
+  document.getElementById('ap-file-input').value='';
+  document.getElementById('ap-up-label').value='';
+  document.getElementById('ap-up-cat').value='';
+}
+// Drag-drop
+(function(){
+  window.addEventListener('DOMContentLoaded',()=>{
+    const z=document.getElementById('ap-drop-zone');
+    if(!z)return;
+    z.addEventListener('dragover',e=>{e.preventDefault();z.classList.add('dragover');});
+    z.addEventListener('dragleave',()=>z.classList.remove('dragover'));
+    z.addEventListener('drop',e=>{e.preventDefault();z.classList.remove('dragover');apHandleFiles(e.dataTransfer.files);});
+  });
+})();
+
+/* ═══════════ GALLERY MANAGER ═══════════ */
+function apMgrFilter(cat,btn){
+  apMgrCat=cat;
+  document.querySelectorAll('#ap-filter-bar .ap-filter').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  apLoadGallery().then(()=>apRenderGallery());
+}
+function apRenderGallery(){
+  const items=apMgrCat==='all'?apGallery:apGallery.filter(g=>g.category===apMgrCat);
+  const grid=document.getElementById('ap-gal-grid'),empty=document.getElementById('ap-gal-empty');
+  document.getElementById('ap-gal-count').textContent=`${items.length} photo${items.length!==1?'s':''}`;
+  if(!items.length){grid.innerHTML='';empty.style.display='block';return;}
+  empty.style.display='none';
+  grid.innerHTML=items.map(p=>`
+    <div class="ap-thumb">
+      <img src="${p.url}" alt="${esc(p.label)}" onclick="apOpenLightbox('${esc(p.url)}')"/>
+      <button class="ap-thumb-del" onclick="apDelPhoto('${p.id}')" title="Delete">&#10005;</button>
+      <div class="ap-thumb-info"><p>${esc(p.label)}</p><span>${p.category}</span></div>
+    </div>`).join('');
+}
+async function apDelPhoto(id){
+  if(!confirm('Delete this photo?'))return;
+  try{
+    await sbDeletePhoto(id);
+    await apLoadGallery();
+    apRenderGallery();apUpdateStats();apRenderRecent();
+    showToast('Photo deleted.','success');
+  } catch(e){showToast('Delete failed: '+e.message,'error');}
+}
+function apOpenLightbox(src){
+  document.getElementById('lightbox-img').src=src;
+  document.getElementById('lightbox').classList.add('active');
+}
+
+/* ═══════════ PRODUCTS (admin) ═══════════ */
+let apProdPendingData=null;
+function apProdFile(files){
+  if(!files||!files[0])return;
+  const reader=new FileReader();
+  reader.onload=e=>{
+    apProdPendingData=e.target.result;
+    const prev=document.getElementById('ap-prod-preview');
+    prev.src=apProdPendingData;prev.style.display='block';
+  };
+  reader.readAsDataURL(files[0]);
+}
+function apSaveProd(){
+  if(!apProdPendingData){showToast('Select a product image.','error');return;}
+  const name=document.getElementById('ap-prod-name').value.trim();
+  if(!name){showToast('Enter product name.','error');return;}
+  const prod={id:Date.now().toString(),data:apProdPendingData,caption:name,
+    category:document.getElementById('ap-prod-cat').value||'General',
+    desc:document.getElementById('ap-prod-desc').value.trim(),
+    price:parseFloat(document.getElementById('ap-prod-price').value)||0,
+    stock:document.getElementById('ap-prod-stock').value,
+    tag:'',waNum:document.getElementById('ap-prod-wa').value.trim()||WA_DEF,
+    hidden:false,added:new Date().toISOString()};
+  const prods=getProds();prods.push(prod);
+  if(saveProds(prods)){
+    showToast(`"${name}" added!`,'success');
+    apProdPendingData=null;
+    document.getElementById('ap-prod-preview').style.display='none';
+    document.getElementById('ap-prod-preview').src='';
+    document.getElementById('ap-prod-file').value='';
+    ['ap-prod-name','ap-prod-desc','ap-prod-price'].forEach(id=>document.getElementById(id).value='');
+    document.getElementById('ap-prod-stock').value='in';
+    document.getElementById('ap-prod-cat').value='All';
+    document.getElementById('ap-prod-wa').value=WA_DEF;
+    apRenderProdList();apUpdateStats();renderProducts();
+  }
+}
+function apRenderProdList(){
+  const el=document.getElementById('ap-prod-list'),prods=getProds();
+  if(!prods.length){el.innerHTML='<p style="color:rgba(158,207,232,.35);font-size:.82rem;padding:16px 0">No products yet.</p>';return;}
+  el.innerHTML=prods.map(p=>`
+    <div style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid rgba(0,212,255,.06);">
+      <img src="${p.data}" alt="${esc(p.caption)}" style="width:48px;height:38px;border-radius:6px;object-fit:cover;flex-shrink:0;"/>
+      <div style="flex:1;min-width:0;"><p style="font-size:.82rem;color:#e8f8ff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${esc(p.caption)}</p><p style="font-size:.7rem;color:rgba(158,207,232,.4);">${p.category} &bull; ${p.price?'&#8377;'+p.price:'Contact'}</p></div>
+      <button onclick="apToggleProd('${p.id}')" style="padding:5px 10px;border-radius:6px;border:1px solid rgba(0,212,255,.2);background:transparent;color:#a0d8f0;font-size:.72rem;cursor:pointer;">${p.hidden?'Show':'Hide'}</button>
+      <button onclick="apDelProd('${p.id}')" style="padding:5px 10px;border-radius:6px;border:1px solid rgba(255,64,96,.2);background:rgba(255,64,96,.08);color:#ff6080;font-size:.72rem;cursor:pointer;">Del</button>
+    </div>`).join('');
+}
+function apToggleProd(id){saveProds(getProds().map(p=>p.id===id?{...p,hidden:!p.hidden}:p));apRenderProdList();renderProducts();showToast('Updated.','success');}
+function apDelProd(id){if(!confirm('Delete product?'))return;saveProds(getProds().filter(p=>p.id!==id));apRenderProdList();apUpdateStats();renderProducts();showToast('Deleted.','success');}
+
+/* ═══════════ SECTION NOTES ═══════════ */
+function apSecSwitch(key,btn){
+  apActiveSec=key;
+  document.querySelectorAll('#ap-sec-pills .ap-filter').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');apLoadSecNote();
+}
+function apLoadSecNote(){
+  const data=getSecs();
+  const el=document.getElementById('ap-sec-note');
+  if(el){el.value=(data[apActiveSec]||{}).note||'';document.getElementById('ap-sec-counter').textContent=el.value.length+' / 500';}
+}
+function apSaveSecNote(){
+  const data=getSecs();
+  if(!data[apActiveSec])data[apActiveSec]={note:''};
+  data[apActiveSec].note=document.getElementById('ap-sec-note').value.trim();
+  saveSecs(data);
+  const s=document.getElementById('ap-sec-saved');s.style.display='block';
+  setTimeout(()=>s.style.display='none',2000);
+}
+
+/* ═══════════ FRONTEND: RENDER PRODUCTS ═══════════ */
+function renderProducts(){
+  const grid=document.getElementById('product-grid'),filterB=document.getElementById('filter-bar');
+  const all=getProds().filter(p=>!p.hidden);
+  const cats=['All',...new Set(all.map(p=>p.category).filter(c=>c&&c!=='All'))];
+  filterB.innerHTML=cats.map(c=>`<button onclick="setFilter('${esc(c)}')" class="btn ${activeFilter===c?'btn-primary':'btn-outline'} filter-btn">${esc(c)}</button>`).join('');
+  const items=activeFilter==='All'?all:all.filter(p=>p.category===activeFilter);
+  if(!items.length){grid.innerHTML=`<div class="gallery-empty"><p>No products yet.</p></div>`;return;}
+  grid.innerHTML=items.map(p=>`
+    <div class="product-card">
+      <div class="product-img-wrap" onclick="openLightbox('${esc(p.id)}','prod')">
+        <img src="${p.data}" alt="${esc(p.caption)}" loading="lazy"/>
+        <div class="product-badge-wrap">${p.tag?`<span class="badge-tag badge-custom">${esc(p.tag)}</span>`:''}${stockBadge(p.stock)}<span class="badge-tag badge-cat">${esc(p.category)}</span></div>
+      </div>
+      <div class="product-info">
+        <div class="product-name">${esc(p.caption)}</div>
+        ${p.desc?`<div class="product-desc">${esc(p.desc)}</div>`:''}
+        <div class="product-price">${priceDisplay(p.price)}</div>
+      </div>
+      <div class="product-actions">
+        <a href="${waLink(p.waNum,p.caption)}" target="_blank" class="wa-btn">${waSVG} Order on WhatsApp</a>
+        <button class="view-btn" onclick="openLightbox('${esc(p.id)}','prod')">View</button>
+      </div>
+    </div>`).join('');
+}
+function setFilter(cat){activeFilter=cat;renderProducts();}
+
+/* ═══════════ PRODUCT LIGHTBOX ═══════════ */
+function openLightbox(id,type){
+  let src='';
+  if(type==='prod'){const p=getProds().find(i=>i.id===id);if(p)src=p.data;}
+  else src=id;
+  if(!src)return;
+  document.getElementById('lightbox-img').src=src;
+  document.getElementById('lightbox').classList.add('active');
+}
+function closeLightbox(){document.getElementById('lightbox').classList.remove('active');}
+document.getElementById('lightbox').addEventListener('click',e=>{if(e.target.id==='lightbox')closeLightbox();});
+
+/* ═══════════ SECTION GALLERY (public) ═══════════ */
+const SEC_TITLES={fish:'Our Fish Collection',birds:'Our Birds',dogs:'Our Dogs',cats:'Our Cats',reptiles:'Our Reptiles',food:'Food &amp; Supplements'};
+function openSectionModal(key){
+  const note=(getSecs()[key]||{}).note||'';
+  document.getElementById('sec-modal-title').textContent=SEC_TITLES[key]||key;
+  document.getElementById('sec-modal-note').textContent=note;
+  const grid=document.getElementById('sec-modal-grid');
+  grid.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:40px;color:#80c0e0;">Loading...</div>';
+  document.getElementById('sec-modal').classList.add('open');
+  document.body.style.overflow='hidden';
+  sbGetGallery(key).then(photos=>{
+    if(!photos.length){
+      grid.innerHTML=`<div style="grid-column:1/-1;text-align:center;padding:50px 20px;color:#80c0e0"><div style="font-size:2.5rem;margin-bottom:12px;opacity:.35">&#128247;</div><p>No photos uploaded yet. Check back soon!</p></div>`;
+    } else {
+      grid.innerHTML=photos.map(p=>`
+        <div class="sec-photo-item" onclick="openSecLightbox('${esc(p.url)}')">
+          <img src="${p.url}" alt="${esc(p.label)}"/>
+          ${p.label?`<div class="sec-photo-cap">${esc(p.label)}</div>`:''}
+        </div>`).join('');
+    }
+  }).catch(()=>{
+    grid.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:40px;color:#ff8080;">Could not load photos.</div>';
+  });
+}
+function closeSectionModal(){document.getElementById('sec-modal').classList.remove('open');document.body.style.overflow='';}
+document.getElementById('sec-modal').addEventListener('click',e=>{if(e.target===document.getElementById('sec-modal'))closeSectionModal();});
+function openSecLightbox(src){document.getElementById('sec-lb-img').src=src;document.getElementById('sec-lightbox').classList.add('open');}
+function closeSecLightbox(){document.getElementById('sec-lightbox').classList.remove('open');}
+document.getElementById('sec-lightbox').addEventListener('click',e=>{if(e.target===document.getElementById('sec-lightbox'))closeSecLightbox();});
+
+/* ═══════════ KEYBOARD ═══════════ */
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeLightbox();closeAdmin();closeSectionModal();closeSecLightbox();}});
+
+/* ═══════════ INIT ═══════════ */
+renderProducts();
+</script>
+
+<script>
+/* ═══════════ CANVAS ENGINE ═══════════ */
+(function(){
+'use strict';
+const canvas=document.getElementById('aqua-canvas');
+const ctx=canvas.getContext('2d');
+const isMobile=window.matchMedia('(pointer:coarse)').matches;
+let W,H,time=0,mouseX=-9999,mouseY=-9999,lerpX=-9999,lerpY=-9999,lastMouseMs=0;
+let waveSpeedMult=1,waveBoostTimer=0,bubbleBoostTimer=0,resizeDebounce=null;
+function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;}
+window.addEventListener('resize',()=>{clearTimeout(resizeDebounce);resizeDebounce=setTimeout(()=>{resize();initBubbles();initFish();},150);});
+resize();
+function drawBG(){const breathe=Math.sin(time*(Math.PI*2/240))*.3;const g=ctx.createLinearGradient(0,H+breathe,0,breathe);g.addColorStop(0,'#010810');g.addColorStop(.45,'#030e1e');g.addColorStop(1,'#071830');ctx.fillStyle=g;ctx.fillRect(0,0,W,H);}
+const caustics=Array.from({length:14},(_,i)=>({bx:Math.random()*1.2-.1,by:Math.random()*.35,rx:22+Math.random()*38,ry:7+Math.random()*13,phase:Math.random()*Math.PI*2,sp:.00012+Math.random()*.00018,alpha:.025+Math.random()*.035,rot:Math.random()*Math.PI}));
+function drawCaustics(){caustics.forEach(c=>{const cx=W*(c.bx+Math.sin(time*c.sp+c.phase)*.08),cy=H*(c.by+Math.cos(time*c.sp*.7+c.phase)*.04);ctx.save();ctx.translate(cx,cy);ctx.rotate(c.rot+time*c.sp*.2);ctx.beginPath();ctx.ellipse(0,0,c.rx,c.ry,0,0,Math.PI*2);ctx.fillStyle=`rgba(0,212,255,${c.alpha})`;ctx.fill();ctx.restore();});}
+const WAVE_CFG=[{amp:20,freq:.007,speed:.00018,phase:0,color:'rgba(4,14,30,0.70)'},{amp:14,freq:.011,speed:.00030,phase:1.2,color:'rgba(3,14,35,0.60)'},{amp:9,freq:.017,speed:.00048,phase:2.7,color:'rgba(0,40,80,0.50)'},{amp:5,freq:.026,speed:.00072,phase:.8,color:'rgba(0,70,120,0.38)'},{amp:3,freq:.040,speed:.00110,phase:3.1,color:'rgba(0,130,180,0.22)'}];
+const WAVE_COUNT=isMobile?3:5;
+function drawWaves(){const sm=waveSpeedMult,mx=lerpX,INFL=120,MAX_D=6,breathe=Math.sin(time*(Math.PI*2/240))*.3;for(let wi=0;wi<WAVE_COUNT;wi++){const w=WAVE_CFG[wi],baseY=H*(.18+wi*.14),t=time*w.speed*sm;ctx.beginPath();ctx.moveTo(0,H);for(let x=0;x<=W;x+=3){let y=baseY+breathe+Math.sin(x*w.freq+t+w.phase)*w.amp+Math.cos(x*w.freq*.6+t*1.3+w.phase)*w.amp*.4;if(mx>-999){const dist=Math.abs(x-mx);if(dist<INFL)y+=Math.sin(dist*.08-time*.05)*MAX_D*(1-dist/INFL);}ctx.lineTo(x,y);}ctx.lineTo(W,H);ctx.closePath();ctx.fillStyle=w.color;ctx.fill();}}
+let ripples=[];
+function spawnRipple(x,y){if(ripples.length>60)ripples.shift();ripples.push({x,y,r:0,life:1});}
+function drawRipples(){ripples=ripples.filter(r=>r.life>0);ripples.forEach(r=>{r.r+=(80-r.r)*.055;r.life-=1/36;const op=r.life*r.life*.35;ctx.beginPath();ctx.arc(r.x,r.y,r.r,0,Math.PI*2);ctx.strokeStyle=`rgba(0,212,255,${op})`;ctx.lineWidth=1.2;ctx.stroke();});}
+const BUBBLE_N=isMobile?8:18;let bubbles=[];
+function makeBubble(fb){return{x:Math.random()*W,y:fb?H+Math.random()*50:Math.random()*H,r:2+Math.random()*8,speed:.3+Math.random()*.9,phase:Math.random()*Math.PI*2,pop:false,popR:0,popA:0};}
+function initBubbles(){bubbles=Array.from({length:BUBBLE_N},()=>makeBubble(false));}
+function drawBubbles(){const boost=bubbleBoostTimer>0?1.5:1;bubbles.forEach(b=>{if(b.pop){b.popR+=(b.r*2-b.popR)*.15;b.popA-=.05;if(b.popA<=0)Object.assign(b,makeBubble(true));ctx.beginPath();ctx.arc(b.x,b.y,b.popR,0,Math.PI*2);ctx.strokeStyle=`rgba(0,212,255,${Math.max(0,b.popA)})`;ctx.lineWidth=1;ctx.stroke();return;}b.y-=b.speed*boost;b.x+=Math.sin(time*.03+b.phase)*.7;if(!isMobile&&mouseX>-999){const dx=b.x-mouseX,dy=b.y-mouseY;if(Math.sqrt(dx*dx+dy*dy)<12){b.pop=true;b.popR=b.r;b.popA=.7;return;}}if(b.y<-b.r*3){Object.assign(b,makeBubble(true));return;}const alpha=Math.min(b.y/(H*.12),(H-b.y)/(H*.08))*.55;ctx.beginPath();ctx.arc(b.x,b.y,b.r,0,Math.PI*2);ctx.strokeStyle=`rgba(160,220,255,${alpha})`;ctx.lineWidth=.8;ctx.stroke();ctx.beginPath();ctx.arc(b.x-b.r*.28,b.y-b.r*.28,b.r*.25,0,Math.PI*2);ctx.fillStyle=`rgba(255,255,255,${alpha*.45})`;ctx.fill();});}
+const FISH_COLORS=['#5ab8cc','#4a7fa8','#a89060','#a06878','#78a898'];const FISH_SIZES=[9,15,22];const FISH_N=isMobile?2:5;let fishes=[];
+function lerp(a,b,t){return a+(b-a)*t;}
+function makeFish(i){const dir=Math.random()<.5?1:-1,sz=FISH_SIZES[i%FISH_SIZES.length],col=FISH_COLORS[i%FISH_COLORS.length];return{x:Math.random()*W,y:60+Math.random()*(H-120),baseY:0,vx:dir*(.4+Math.random()*1.4),angle:dir>0?0:Math.PI,targetAngle:dir>0?0:Math.PI,sz,col,phase:Math.random()*Math.PI*2,wobble:2+Math.random()*2,fleeing:false,scatter:0};}
+function initFish(){fishes=Array.from({length:FISH_N},(_,i)=>{const f=makeFish(i);f.baseY=f.y;return f;});}
+function drawFish(f){const s=f.sz,flex=1+Math.sin(time*.08+f.phase)*.03,facingLeft=Math.cos(f.angle)<0;ctx.save();ctx.translate(f.x,f.y);if(facingLeft)ctx.scale(-1,1);ctx.scale(flex,1);ctx.beginPath();ctx.moveTo(-s*1.1,0);ctx.lineTo(-s*1.9,-s*.7);ctx.lineTo(-s*1.6,0);ctx.lineTo(-s*1.9,s*.7);ctx.closePath();ctx.fillStyle=f.col;ctx.globalAlpha=.22;ctx.fill();ctx.globalAlpha=.30;ctx.beginPath();ctx.ellipse(0,0,s*1.1,s*.48,0,0,Math.PI*2);ctx.fillStyle=f.col;ctx.fill();ctx.beginPath();ctx.moveTo(-s*.1,-s*.48);ctx.quadraticCurveTo(s*.2,-s*.95,s*.45,-s*.48);ctx.closePath();ctx.fillStyle=f.col;ctx.globalAlpha=.18;ctx.fill();ctx.beginPath();ctx.moveTo(s*.1,s*.1);ctx.quadraticCurveTo(s*.45,s*.55,s*.6,s*.15);ctx.closePath();ctx.fillStyle=f.col;ctx.globalAlpha=.15;ctx.fill();ctx.globalAlpha=.35;ctx.beginPath();ctx.arc(s*.55,-s*.08,s*.11,0,Math.PI*2);ctx.fillStyle='#fff';ctx.fill();ctx.beginPath();ctx.arc(s*.57,-s*.08,s*.065,0,Math.PI*2);ctx.fillStyle='#020b18';ctx.fill();ctx.globalAlpha=1;ctx.restore();}
+function updateFish(){fishes.forEach(f=>{f.y=f.baseY+Math.sin(time*.04+f.phase)*f.wobble;if(!isMobile&&mouseX>-999){const dx=f.x-mouseX,dy=f.baseY-mouseY,dist=Math.sqrt(dx*dx+dy*dy);if(dist<80){f.targetAngle=Math.atan2(dy,dx);f.fleeing=true;}else{f.fleeing=false;f.targetAngle=f.vx>=0?0:Math.PI;}}else f.targetAngle=f.vx>=0?0:Math.PI;let da=f.targetAngle-f.angle;while(da>Math.PI)da-=Math.PI*2;while(da<-Math.PI)da+=Math.PI*2;f.angle=lerp(f.angle,f.angle+da,.06);const spd=Math.abs(f.vx)*(f.fleeing?1.6:1);f.x+=Math.cos(f.angle)*spd;f.baseY+=Math.sin(f.angle)*spd*.25;if(f.scatter>0){f.x+=f.vx>0?1.5:-1.5;f.scatter=Math.max(0,f.scatter-.04);}f.baseY=Math.max(50,Math.min(H-50,f.baseY));const m=f.sz*3;if(f.x>W+m){f.x=-m;f.vx=Math.abs(f.vx);}else if(f.x<-m){f.x=W+m;f.vx=-Math.abs(f.vx);}});}
+let lastScrollY=window.scrollY;
+window.addEventListener('scroll',()=>{const dy=Math.abs(window.scrollY-lastScrollY);lastScrollY=window.scrollY;waveSpeedMult=Math.min(1.4,waveSpeedMult+dy*.005);waveBoostTimer=48;bubbleBoostTimer=24;if(dy>40)fishes.forEach(f=>{if(f.x>0&&f.x<W)f.scatter=1;});},{passive:true});
+if(!isMobile){window.addEventListener('mousemove',e=>{const now=Date.now();if(now-lastMouseMs<16.7)return;lastMouseMs=now;mouseX=e.clientX;mouseY=e.clientY;spawnRipple(e.clientX,e.clientY);});window.addEventListener('click',e=>{bubbles.forEach(b=>{if(b.pop)return;const dx=b.x-e.clientX,dy=b.y-e.clientY;if(Math.sqrt(dx*dx+dy*dy)<b.r+6){b.pop=true;b.popR=b.r;b.popA=.7;}});});}
+function loop(){time++;ctx.clearRect(0,0,W,H);if(lerpX<-998){lerpX=mouseX;lerpY=mouseY;}else{lerpX=lerp(lerpX,mouseX,.08);lerpY=lerp(lerpY,mouseY,.08);}if(waveBoostTimer>0)waveBoostTimer--;else waveSpeedMult=lerp(waveSpeedMult,1,.04);if(bubbleBoostTimer>0)bubbleBoostTimer--;drawBG();drawCaustics();drawWaves();drawRipples();drawBubbles();updateFish();fishes.forEach(drawFish);requestAnimationFrame(loop);}
+initBubbles();initFish();requestAnimationFrame(loop);
+})();
+</script>
+</body>
+</html>
