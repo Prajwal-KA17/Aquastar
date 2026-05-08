@@ -617,12 +617,24 @@ let apActiveSec    = 'fish';
 let apMgrCat       = 'all';
 let activeFilter   = 'All';
 
-/* ═══════════ STORAGE (products & sections stay local) ═══════════ */
-function getProds(){try{return JSON.parse(localStorage.getItem(LS_PRODS))||[];}catch(e){return[];}}
-function saveProds(a){try{localStorage.setItem(LS_PRODS,JSON.stringify(a));return true;}catch(e){showToast('Storage full!','error');return false;}}
+/* ═══════════ STORAGE (sections stay local, products → Supabase) ═══════════ */
 function getSecs(){try{const d=JSON.parse(localStorage.getItem(LS_SECS));if(d)return d;}catch(e){}return{fish:{note:''},birds:{note:''},dogs:{note:''},cats:{note:''},reptiles:{note:''},food:{note:''}};}
 function saveSecs(o){localStorage.setItem(LS_SECS,JSON.stringify(o));}
 if(!localStorage.getItem(LS_SECS))saveSecs(getSecs());
+
+/* Supabase product helpers */
+async function sbGetProds(){
+  try{const r=await fetch(SB_URL+'/rest/v1/products?order=created_at.desc',{headers:SB_HDR});if(!r.ok)return[];return r.json();}catch(e){return[];}
+}
+async function sbInsertProd(row){
+  return sbFetch('/rest/v1/products',{method:'POST',body:JSON.stringify(row),headers:{...SB_HDR,'Prefer':'return=representation'}});
+}
+async function sbUpdateProd(id,patch){
+  return fetch(SB_URL+`/rest/v1/products?id=eq.${id}`,{method:'PATCH',headers:{...SB_HDR,'Prefer':'return=representation'},body:JSON.stringify(patch)});
+}
+async function sbDeleteProd(id){
+  return fetch(SB_URL+`/rest/v1/products?id=eq.${id}`,{method:'DELETE',headers:SB_HDR});
+}
 
 /* ═══════════ HELPERS ═══════════ */
 function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
@@ -688,7 +700,7 @@ function apShowPage(id,btn){
 function apUpdateStats(){
   document.getElementById('ap-stat-total').textContent=apGallery.length;
   ['fish','birds','dogs'].forEach(c=>document.getElementById('ap-stat-'+c).textContent=apGallery.filter(g=>g.category===c).length);
-  document.getElementById('ap-stat-prods').textContent=getProds().length;
+  sbGetProds().then(prods=>document.getElementById('ap-stat-prods').textContent=prods.length);
 }
 function apRenderRecent(){
   const el=document.getElementById('ap-recent');
@@ -823,19 +835,38 @@ function apProdFile(files){
   };
   reader.readAsDataURL(files[0]);
 }
-function apSaveProd(){
+async function apSaveProd(){
   if(!apProdPendingData){showToast('Select a product image.','error');return;}
   const name=document.getElementById('ap-prod-name').value.trim();
   if(!name){showToast('Enter product name.','error');return;}
-  const prod={id:Date.now().toString(),data:apProdPendingData,caption:name,
-    category:document.getElementById('ap-prod-cat').value||'General',
-    desc:document.getElementById('ap-prod-desc').value.trim(),
-    price:parseFloat(document.getElementById('ap-prod-price').value)||0,
-    stock:document.getElementById('ap-prod-stock').value,
-    tag:'',waNum:document.getElementById('ap-prod-wa').value.trim()||WA_DEF,
-    hidden:false,added:new Date().toISOString()};
-  const prods=getProds();prods.push(prod);
-  if(saveProds(prods)){
+
+  showToast('Uploading...','success');
+  let imageUrl='';
+  try{
+    // Upload image to Cloudinary
+    const fd=new FormData();
+    fd.append('file', apProdPendingData);
+    fd.append('upload_preset', CLD_PRESET);
+    fd.append('folder','aquastar/products');
+    const cldRes=await fetch(CLD_URL,{method:'POST',body:fd});
+    if(!cldRes.ok)throw new Error('Image upload failed');
+    const cldData=await cldRes.json();
+    imageUrl=cldData.secure_url;
+  } catch(e){showToast('Image upload failed: '+e.message,'error');return;}
+
+  try{
+    await sbInsertProd({
+      id: Date.now().toString(),
+      data: imageUrl,
+      caption: name,
+      category: document.getElementById('ap-prod-cat').value||'General',
+      description: document.getElementById('ap-prod-desc').value.trim(),
+      price: parseFloat(document.getElementById('ap-prod-price').value)||0,
+      stock: document.getElementById('ap-prod-stock').value,
+      tag: '',
+      wa_num: document.getElementById('ap-prod-wa').value.trim()||WA_DEF,
+      hidden: false
+    });
     showToast(`"${name}" added!`,'success');
     apProdPendingData=null;
     document.getElementById('ap-prod-preview').style.display='none';
@@ -843,24 +874,31 @@ function apSaveProd(){
     document.getElementById('ap-prod-file').value='';
     ['ap-prod-name','ap-prod-desc','ap-prod-price'].forEach(id=>document.getElementById(id).value='');
     document.getElementById('ap-prod-stock').value='in';
-    document.getElementById('ap-prod-cat').value='All';
+    document.getElementById('ap-prod-cat').value='';
     document.getElementById('ap-prod-wa').value=WA_DEF;
     apRenderProdList();apUpdateStats();renderProducts();
-  }
+  } catch(e){showToast('Save failed: '+e.message,'error');}
 }
-function apRenderProdList(){
-  const el=document.getElementById('ap-prod-list'),prods=getProds();
+async function apRenderProdList(){
+  const el=document.getElementById('ap-prod-list');
+  const prods=await sbGetProds();
   if(!prods.length){el.innerHTML='<p style="color:rgba(158,207,232,.35);font-size:.82rem;padding:16px 0">No products yet.</p>';return;}
   el.innerHTML=prods.map(p=>`
     <div style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid rgba(0,212,255,.06);">
       <img src="${p.data}" alt="${esc(p.caption)}" style="width:48px;height:38px;border-radius:6px;object-fit:cover;flex-shrink:0;"/>
       <div style="flex:1;min-width:0;"><p style="font-size:.82rem;color:#e8f8ff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${esc(p.caption)}</p><p style="font-size:.7rem;color:rgba(158,207,232,.4);">${p.category} &bull; ${p.price?'&#8377;'+p.price:'Contact'}</p></div>
-      <button onclick="apToggleProd('${p.id}')" style="padding:5px 10px;border-radius:6px;border:1px solid rgba(0,212,255,.2);background:transparent;color:#a0d8f0;font-size:.72rem;cursor:pointer;">${p.hidden?'Show':'Hide'}</button>
+      <button onclick="apToggleProd('${p.id}',${p.hidden})" style="padding:5px 10px;border-radius:6px;border:1px solid rgba(0,212,255,.2);background:transparent;color:#a0d8f0;font-size:.72rem;cursor:pointer;">${p.hidden?'Show':'Hide'}</button>
       <button onclick="apDelProd('${p.id}')" style="padding:5px 10px;border-radius:6px;border:1px solid rgba(255,64,96,.2);background:rgba(255,64,96,.08);color:#ff6080;font-size:.72rem;cursor:pointer;">Del</button>
     </div>`).join('');
 }
-function apToggleProd(id){saveProds(getProds().map(p=>p.id===id?{...p,hidden:!p.hidden}:p));apRenderProdList();renderProducts();showToast('Updated.','success');}
-function apDelProd(id){if(!confirm('Delete product?'))return;saveProds(getProds().filter(p=>p.id!==id));apRenderProdList();apUpdateStats();renderProducts();showToast('Deleted.','success');}
+async function apToggleProd(id,currentHidden){
+  await sbUpdateProd(id,{hidden:!currentHidden});
+  apRenderProdList();renderProducts();showToast('Updated.','success');
+}
+async function apDelProd(id){
+  if(!confirm('Delete product?'))return;
+  await sbDeleteProd(id);apRenderProdList();apUpdateStats();renderProducts();showToast('Deleted.','success');
+}
 
 /* ═══════════ SECTION NOTES ═══════════ */
 function apSecSwitch(key,btn){
@@ -883,9 +921,9 @@ function apSaveSecNote(){
 }
 
 /* ═══════════ FRONTEND: RENDER PRODUCTS ═══════════ */
-function renderProducts(){
+async function renderProducts(){
   const grid=document.getElementById('product-grid'),filterB=document.getElementById('filter-bar');
-  const all=getProds().filter(p=>!p.hidden);
+  const all=(await sbGetProds()).filter(p=>!p.hidden);
   const cats=['All',...new Set(all.map(p=>p.category).filter(c=>c&&c!=='All'))];
   filterB.innerHTML=cats.map(c=>`<button onclick="setFilter('${esc(c)}')" class="btn ${activeFilter===c?'btn-primary':'btn-outline'} filter-btn">${esc(c)}</button>`).join('');
   const items=activeFilter==='All'?all:all.filter(p=>p.category===activeFilter);
@@ -898,11 +936,11 @@ function renderProducts(){
       </div>
       <div class="product-info">
         <div class="product-name">${esc(p.caption)}</div>
-        ${p.desc?`<div class="product-desc">${esc(p.desc)}</div>`:''}
+        ${p.description?`<div class="product-desc">${esc(p.description)}</div>`:''}
         <div class="product-price">${priceDisplay(p.price)}</div>
       </div>
       <div class="product-actions">
-        <a href="${waLink(p.waNum,p.caption)}" target="_blank" class="wa-btn">${waSVG} Order on WhatsApp</a>
+        <a href="${waLink(p.wa_num,p.caption)}" target="_blank" class="wa-btn">${waSVG} Order on WhatsApp</a>
         <button class="view-btn" onclick="openLightbox('${esc(p.id)}','prod')">View</button>
       </div>
     </div>`).join('');
@@ -911,12 +949,15 @@ function setFilter(cat){activeFilter=cat;renderProducts();}
 
 /* ═══════════ PRODUCT LIGHTBOX ═══════════ */
 function openLightbox(id,type){
-  let src='';
-  if(type==='prod'){const p=getProds().find(i=>i.id===id);if(p)src=p.data;}
-  else src=id;
-  if(!src)return;
-  document.getElementById('lightbox-img').src=src;
-  document.getElementById('lightbox').classList.add('active');
+  if(type==='prod'){
+    sbGetProds().then(prods=>{
+      const p=prods.find(i=>i.id===id);
+      if(p){document.getElementById('lightbox-img').src=p.data;document.getElementById('lightbox').classList.add('active');}
+    });
+  } else {
+    document.getElementById('lightbox-img').src=id;
+    document.getElementById('lightbox').classList.add('active');
+  }
 }
 function closeLightbox(){document.getElementById('lightbox').classList.remove('active');}
 document.getElementById('lightbox').addEventListener('click',e=>{if(e.target.id==='lightbox')closeLightbox();});
