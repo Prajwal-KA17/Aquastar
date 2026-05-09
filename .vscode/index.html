@@ -649,7 +649,7 @@ function showToast(msg,type='success'){const t=document.getElementById('toast');
 function stockBadge(s){const m={in:{c:'badge-stock-in',l:'In Stock'},out:{c:'badge-stock-out',l:'Out of Stock'},limited:{c:'badge-stock-out',l:'Limited'},preorder:{c:'badge-custom',l:'Pre-Order'}};const x=m[s]||m.in;return`<span class="badge-tag ${x.c}">${x.l}</span>`;}
 function priceDisplay(p){if(!p||p==0)return`<span style="color:rgba(204,228,245,.5);font-size:.88rem">Contact for Price</span>`;return`&#8377;${parseFloat(p).toLocaleString('en-IN')}<span> / item</span>`;}
 function waLink(n,name,price,cat){
-  const num=n||WA_DEF;
+  const num=(n&&n!=='919876543210')?n:WA_DEF;
   const priceStr=price&&price>0?`\nPrice: ₹${parseFloat(price).toLocaleString('en-IN')}`:'';
   const catStr=cat?` (${cat})`:'';
   const msg=`Hi Aqua Star! 👋\n\nI'm interested in purchasing:\n*${name}*${catStr}${priceStr}\n\nCould you please share more details and availability? Thank you!`;
