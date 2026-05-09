@@ -35,7 +35,7 @@
   "name": "Aqua Star",
   "description": "Premium pet store in Mangalore selling fish, birds, cats, aquariums and accessories.",
   "url": "https://aquastar.vercel.app",
-  "telephone": "+919876543210",
+  "telephone": "+919964338802",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Shop #G38, Ground Floor, Smart City, Thokkottu",
@@ -191,6 +191,20 @@ footer{text-align:center;padding:32px;border-top:1px solid rgba(0,212,255,.08);c
   .btn-group{flex-direction:column;align-items:center;}
   .btn{width:100%;max-width:280px;justify-content:center;}
   .sec-modal-grid{grid-template-columns:1fr;}
+  .product-grid{grid-template-columns:repeat(2,1fr);gap:10px;}
+  .product-card{border-radius:10px;}
+  .product-img-wrap{height:130px;}
+  .product-info{padding:10px 10px;gap:4px;}
+  .product-name{font-size:.95rem;}
+  .product-desc{font-size:.72rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+  .product-price{font-size:.9rem;}
+  .product-actions{padding:8px 10px;gap:5px;flex-direction:column;}
+  .wa-btn{font-size:.65rem;padding:7px 8px;}
+  .view-btn{font-size:.65rem;padding:6px 8px;text-align:center;}
+  .badge-tag{font-size:.58rem;padding:3px 6px;}
+  .sec-modal-grid{grid-template-columns:repeat(2,1fr);gap:10px;}
+  .sec-photo-item img{height:120px;}
+  .sec-photo-cap{font-size:.72rem;padding:6px 8px;}
   .filter-bar{gap:6px;flex-wrap:wrap;justify-content:center;}
   .filter-btn{padding:6px 14px!important;font-size:.68rem!important;border-radius:99px!important;white-space:nowrap;flex-shrink:0;width:auto!important;max-width:none!important;}
   .section-title{font-size:clamp(2.6rem,7vw,3.8rem)!important;}
@@ -229,11 +243,11 @@ footer{text-align:center;padding:32px;border-top:1px solid rgba(0,212,255,.08);c
     <a href="#contact">Contact</a>
   </div>
   <div class="nav-actions">
-    <a href="tel:+919876543210" class="nav-btn">
+    <a href="tel:+919964338802" class="nav-btn">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
       Call Us
     </a>
-    <a href="https://wa.me/919876543210" target="_blank" class="nav-btn nav-btn-wa">
+    <a href="https://wa.me/919845346976" target="_blank" class="nav-btn nav-btn-wa">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
       WhatsApp
     </a>
@@ -305,7 +319,7 @@ footer{text-align:center;padding:32px;border-top:1px solid rgba(0,212,255,.08);c
         </div>
         <div>
           <div style="font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(0,212,255,.7);margin-bottom:5px;">Phone</div>
-          <div style="color:#c8e8ff;font-size:.88rem;">+91 98765 43210</div>
+          <div style="color:#c8e8ff;font-size:.88rem;line-height:1.8;">+91 99643 38802<br/>+91 98453 46976</div>
         </div>
       </div>
 
@@ -327,7 +341,7 @@ footer{text-align:center;padding:32px;border-top:1px solid rgba(0,212,255,.08);c
         </div>
         <div>
           <div style="font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(0,212,255,.7);margin-bottom:5px;">WhatsApp</div>
-          <div style="color:#c8e8ff;font-size:.88rem;">+91 98765 43210</div>
+          <div style="color:#c8e8ff;font-size:.88rem;line-height:1.8;"><a href="https://wa.me/919845346976" target="_blank" style="color:#c8e8ff;text-decoration:none;">+91 98453 46976</a></div>
         </div>
       </div>
     </div>
@@ -462,7 +476,7 @@ select.ap-input option{background:#051428;color:#cce4f5;}
           <div class="ap-stat"><div class="ap-stat-label">Total Photos</div><div class="ap-stat-num" id="ap-stat-total">0</div></div>
           <div class="ap-stat"><div class="ap-stat-label">Fish</div><div class="ap-stat-num" id="ap-stat-fish">0</div></div>
           <div class="ap-stat"><div class="ap-stat-label">Birds</div><div class="ap-stat-num" id="ap-stat-birds">0</div></div>
-          <div class="ap-stat"><div class="ap-stat-label">Dogs</div><div class="ap-stat-num" id="ap-stat-dogs">0</div></div>
+          <div class="ap-stat"><div class="ap-stat-label">Cats</div><div class="ap-stat-num" id="ap-stat-cats">0</div></div>
           <div class="ap-stat"><div class="ap-stat-label">Products</div><div class="ap-stat-num" id="ap-stat-prods">0</div></div>
         </div>
         <div class="ap-card">
@@ -497,10 +511,7 @@ select.ap-input option{background:#051428;color:#cce4f5;}
                 <option value="">— Select —</option>
                 <option value="fish">Fish</option>
                 <option value="birds">Birds</option>
-                <option value="dogs">Dogs</option>
                 <option value="cats">Cats</option>
-                <option value="reptiles">Reptiles</option>
-                <option value="food">Food &amp; Supplements</option>
               </select>
             </div>
           </div>
@@ -518,10 +529,7 @@ select.ap-input option{background:#051428;color:#cce4f5;}
           <button class="ap-filter active" onclick="apMgrFilter('all',this)">All</button>
           <button class="ap-filter" onclick="apMgrFilter('fish',this)">Fish</button>
           <button class="ap-filter" onclick="apMgrFilter('birds',this)">Birds</button>
-          <button class="ap-filter" onclick="apMgrFilter('dogs',this)">Dogs</button>
           <button class="ap-filter" onclick="apMgrFilter('cats',this)">Cats</button>
-          <button class="ap-filter" onclick="apMgrFilter('reptiles',this)">Reptiles</button>
-          <button class="ap-filter" onclick="apMgrFilter('food',this)">Food</button>
         </div>
         <p id="ap-gal-count" style="font-size:.72rem;color:rgba(158,207,232,.35);letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px;"></p>
         <div id="ap-gal-grid" class="ap-gallery"></div>
@@ -541,9 +549,9 @@ select.ap-input option{background:#051428;color:#cce4f5;}
             <div><label class="ap-label">Product Name *</label><input id="ap-prod-name" type="text" class="ap-input" placeholder="e.g. Koi Fish"/></div>
             <div><label class="ap-label">Category *</label>
               <select id="ap-prod-cat" class="ap-input">
-                <option value="">— Select Category —</option><option value="Fish">Fish</option><option value="Dogs">Dogs</option>
-                <option value="Cats">Cats</option><option value="Birds">Birds</option><option value="Reptiles">Reptiles</option>
-                <option value="Food">Pet Food</option><option value="Accessories">Accessories</option><option value="Aquarium">Aquarium</option>
+                <option value="">— Select Category —</option><option value="Fish">Fish</option>
+                <option value="Cats">Cats</option><option value="Birds">Birds</option>
+                <option value="Accessories">Accessories</option><option value="Aquarium">Aquarium</option>
               </select>
             </div>
             <div><label class="ap-label">Price (&#8377;)</label><input id="ap-prod-price" type="number" class="ap-input" placeholder="0" min="0"/></div>
@@ -555,7 +563,7 @@ select.ap-input option{background:#051428;color:#cce4f5;}
             </div>
           </div>
           <div style="margin-top:12px;"><label class="ap-label">Description</label><textarea id="ap-prod-desc" class="ap-input" style="resize:vertical;min-height:70px;" placeholder="Short description..."></textarea></div>
-          <div style="margin-top:12px;"><label class="ap-label">WhatsApp Number</label><input id="ap-prod-wa" type="text" class="ap-input" placeholder="919876543210" value="919876543210"/></div>
+          <div style="margin-top:12px;"><label class="ap-label">WhatsApp Number</label><input id="ap-prod-wa" type="text" class="ap-input" placeholder="919845346976" value="919845346976"/></div>
           <button onclick="apSaveProd()" class="ap-btn ap-btn-primary" style="margin-top:16px;width:100%;padding:12px;">Save Product</button>
         </div>
         <div class="ap-card">
@@ -569,10 +577,7 @@ select.ap-input option{background:#051428;color:#cce4f5;}
         <div class="ap-filter-bar" id="ap-sec-pills">
           <button class="ap-filter active" onclick="apSecSwitch('fish',this)">Fish</button>
           <button class="ap-filter" onclick="apSecSwitch('birds',this)">Birds</button>
-          <button class="ap-filter" onclick="apSecSwitch('dogs',this)">Dogs</button>
           <button class="ap-filter" onclick="apSecSwitch('cats',this)">Cats</button>
-          <button class="ap-filter" onclick="apSecSwitch('reptiles',this)">Reptiles</button>
-          <button class="ap-filter" onclick="apSecSwitch('food',this)">Food</button>
         </div>
         <div class="ap-card">
           <label class="ap-label">Section note shown to visitors:</label>
@@ -594,7 +599,7 @@ select.ap-input option{background:#051428;color:#cce4f5;}
 const AP_USER = 'admin', AP_PASS = 'aquastar2025';
 const LS_PRODS = 'aquastar_products_v2';
 const LS_SECS  = 'aquastar_sections_v1';
-const WA_DEF   = '919876543210';
+const WA_DEF   = '919845346976';
 
 /* ── Cloudinary ── */
 const CLD_CLOUD  = 'dst3d5tjb';
@@ -633,7 +638,7 @@ let apMgrCat       = 'all';
 let activeFilter   = 'All';
 
 /* ═══════════ STORAGE (sections stay local, products → Supabase) ═══════════ */
-function getSecs(){try{const d=JSON.parse(localStorage.getItem(LS_SECS));if(d)return d;}catch(e){}return{fish:{note:''},birds:{note:''},dogs:{note:''},cats:{note:''},reptiles:{note:''},food:{note:''}};}
+function getSecs(){try{const d=JSON.parse(localStorage.getItem(LS_SECS));if(d)return d;}catch(e){}return{fish:{note:''},birds:{note:''},cats:{note:''}};}
 function saveSecs(o){localStorage.setItem(LS_SECS,JSON.stringify(o));}
 if(!localStorage.getItem(LS_SECS))saveSecs(getSecs());
 
@@ -657,8 +662,13 @@ function genId(){return 'id_'+Date.now()+'_'+Math.random().toString(36).slice(2,
 function showToast(msg,type='success'){const t=document.getElementById('toast');t.textContent=msg;t.className='toast '+type;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3200);}
 function stockBadge(s){const m={in:{c:'badge-stock-in',l:'In Stock'},out:{c:'badge-stock-out',l:'Out of Stock'},limited:{c:'badge-stock-out',l:'Limited'},preorder:{c:'badge-custom',l:'Pre-Order'}};const x=m[s]||m.in;return`<span class="badge-tag ${x.c}">${x.l}</span>`;}
 function priceDisplay(p){if(!p||p==0)return`<span style="color:rgba(204,228,245,.5);font-size:.88rem">Contact for Price</span>`;return`&#8377;${parseFloat(p).toLocaleString('en-IN')}<span> / item</span>`;}
-function waLink(n,name){const num=n||WA_DEF;return`https://wa.me/${num}?text=${encodeURIComponent('Hi! I\'m interested in: *'+name+'* from Aqua Star, Mangalore.')}`;}
-const waSVG=`<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>`;
+function waLink(n,name,price,cat){
+  const num=n||WA_DEF;
+  const priceStr=price&&price>0?`\nPrice: ₹${parseFloat(price).toLocaleString('en-IN')}`:'';
+  const catStr=cat?` (${cat})`:'';
+  const msg=`Hi Aqua Star! 👋\n\nI'm interested in purchasing:\n*${name}*${catStr}${priceStr}\n\nCould you please share more details and availability? Thank you!`;
+  return`https://wa.me/${num}?text=${encodeURIComponent(msg)}`;
+}const waSVG=`<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>`;
 
 /* ═══════════ ADMIN OPEN/CLOSE ═══════════ */
 function openAdmin(e){
@@ -714,7 +724,7 @@ function apShowPage(id,btn){
 /* ═══════════ STATS ═══════════ */
 function apUpdateStats(){
   document.getElementById('ap-stat-total').textContent=apGallery.length;
-  ['fish','birds','dogs'].forEach(c=>document.getElementById('ap-stat-'+c).textContent=apGallery.filter(g=>g.category===c).length);
+  ['fish','birds','cats'].forEach(c=>document.getElementById('ap-stat-'+c).textContent=apGallery.filter(g=>g.category===c).length);
   sbGetProds().then(prods=>document.getElementById('ap-stat-prods').textContent=prods.length);
 }
 function apRenderRecent(){
@@ -955,7 +965,7 @@ async function renderProducts(){
         <div class="product-price">${priceDisplay(p.price)}</div>
       </div>
       <div class="product-actions">
-        <a href="${waLink(p.wa_num,p.caption)}" target="_blank" class="wa-btn">${waSVG} Order on WhatsApp</a>
+        <a href="${waLink(p.wa_num,p.caption,p.price,p.category)}" target="_blank" class="wa-btn">${waSVG} Order on WhatsApp</a>
         <button class="view-btn" onclick="openLightbox('${esc(p.id)}','prod')">View</button>
       </div>
     </div>`).join('');
@@ -978,7 +988,7 @@ function closeLightbox(){document.getElementById('lightbox').classList.remove('a
 document.getElementById('lightbox').addEventListener('click',e=>{if(e.target.id==='lightbox')closeLightbox();});
 
 /* ═══════════ SECTION GALLERY (public) ═══════════ */
-const SEC_TITLES={fish:'Our Fish Collection',birds:'Our Birds',dogs:'Our Dogs',cats:'Our Cats',reptiles:'Our Reptiles',food:'Food &amp; Supplements'};
+const SEC_TITLES={fish:'Our Fish Collection',birds:'Our Birds',cats:'Our Cats'};
 function openSectionModal(key){
   const note=(getSecs()[key]||{}).note||'';
   document.getElementById('sec-modal-title').textContent=SEC_TITLES[key]||key;
